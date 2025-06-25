@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.static("route-s"));
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://hisamuddin805:99720845786@cluster0.rbuq1qh.mongodb.net/new-auth-test")
+mongoose.connect("")
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch((err) => {
     console.error("❌ MongoDB connection failed:", err);
