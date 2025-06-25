@@ -1,2 +1,9 @@
-node_modules
+# .gitignore
+
+# Ignore local database file (if using SQLite, NeDB, etc.)
+db.sqlite
+/data/
+database/
+
+# Ignore .env file (local secrets)
 .env
