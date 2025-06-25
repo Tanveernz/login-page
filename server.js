@@ -147,6 +147,9 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "API is running ✅" });
 });
 
+
+
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
