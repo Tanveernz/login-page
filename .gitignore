@@ -1,7 +1,7 @@
 # .gitignore
 
 # Ignore local database file (if using SQLite, NeDB, etc.)
-db.sqlite
+db.js
 /data/
 database/
 
