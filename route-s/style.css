@@ -1,0 +1,241 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Body */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f7f1e7; /* light beige */
+  color: #4a3c31; /* dark brown text */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Container */
+.container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  background: #fffdfa; /* off-white */
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(122, 102, 76, 0.2);
+  overflow: hidden;
+}
+
+/* Left side - forms */
+.forms-container {
+  flex: 1;
+  padding: 60px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  background: #d8c6b8; /* light warm brown */
+}
+
+/* Each form section */
+#login-section,
+#signup-section {
+  background: #cbbcae; /* beige */
+  padding: 40px 35px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.6);
+  width: 100%;
+}
+
+/* Headings */
+h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #4a3c31; /* dark brown */
+}
+
+/* Input groups */
+.input-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #5a4b3c; /* medium brown */
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #b59f8f; /* medium beige/brown */
+  border-radius: 14px;
+  font-size: 1.1rem;
+  background-color: #f9f6f1; /* creamy white */
+  color: #4a3c31; /* dark brown text */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus {
+  border-color: #a07c53; /* warm brown */
+  box-shadow: 0 0 10px rgba(160, 124, 83, 0.5);
+  outline: none;
+  background-color: #fffdfa; /* bright creamy */
+  color: #3e3021;
+}
+
+/* Buttons */
+.submit-btn {
+  width: 100%;
+  padding: 18px 0;
+  background: #a07c53; /* warm brown */
+  color: #fffdfa; /* creamy white text */
+  border: none;
+  border-radius: 16px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(160, 124, 83, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #8a6b43; /* darker warm brown */
+  box-shadow: 0 8px 25px rgba(138, 107, 67, 0.7);
+}
+
+/* Right side image container */
+.image-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: #f1e6d8; /* light beige */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85) saturate(0.8);
+  transition: filter 0.3s ease;
+}
+
+.image-container img:hover {
+  filter: brightness(1) saturate(1);
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    max-width: 450px;
+  }
+
+  .forms-container {
+    padding: 40px 30px;
+    gap: 40px;
+  }
+
+  #login-section,
+  #signup-section {
+    padding: 30px 25px;
+  }
+
+  .image-container {
+    height: 250px;
+    width: 100%;
+  }
+
+  .image-container img {
+    object-position: center center;
+  }
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #a07c53;
+  color: #fffdfa;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: #8a6b43;
+  box-shadow: 0 4px 12px rgba(138, 107, 67, 0.6);
+}
+
+/* DARK MODE OVERRIDES */
+body.dark-mode {
+  background-color: #2b221a;
+  color: #f5ede4;
+}
+
+body.dark-mode .container {
+  background-color: #3a2f26;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .forms-container {
+  background-color: #4a3a2f;
+}
+
+body.dark-mode #login-section,
+body.dark-mode #signup-section {
+  background-color: #5a473a;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode h1,
+body.dark-mode label {
+  color: #f7f1e7;
+}
+
+body.dark-mode input[type='text'],
+body.dark-mode input[type='email'],
+body.dark-mode input[type='password'] {
+  background-color: #2f241b;
+  border-color: #7e6654;
+  color: #f7f1e7;
+}
+
+body.dark-mode input:focus {
+  background-color: #3a2f26;
+  color: #ffffff;
+  border-color: #a07c53;
+}
+
+body.dark-mode .submit-btn {
+  background-color: #7e5e3d;
+  color: #f7f1e7;
+}
+
+body.dark-mode .submit-btn:hover {
+  background-color: #66492e;
+}
+
+body.dark-mode .image-container {
+  background-color: #3a2f26;
+}
+
+body.dark-mode .image-container img {
+  filter: brightness(0.7) saturate(0.6);
+}
