@@ -16,16 +16,16 @@ app.use(express.json());
 app.use(express.static("route-s"));
 
 // Connect to MongoDB
-mongoose.connect("")
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch((err) => {
     console.error("❌ MongoDB connection failed:", err);
-    process.exit(1); // Stop app if DB fails
+    process.exit(1);
   });
 
-/**
- * SIGNUP ENDPOINT
- */
+
+ //SIGNUP ENDPOINT
+
 app.post("/signup", async (req, res) => {
   try {
     console.log("📨 Signup request received:", req.body);
